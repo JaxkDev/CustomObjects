@@ -1,52 +1,32 @@
-name: Vehicles
+name: CustomObjects
 author: JaxkDev
 version: 0.0.3
 api: [3.9.0]
 mcpe-protocol: [361]
-main: JaxkDev\Vehicles\Main
-website: "https://github.com/JaxkDev/Vehicles"
-description: "[W.I.P | Pre-Release] PocketMine-MP plugin that brings vehicles and other objects to your server !"
+main: JaxkDev\CustomObjects\Main
+website: "https://github.com/JaxkDev/CustomObjects"
+description: "[W.I.P | Pre-Release] PocketMine-MP plugin that brings custom objects to your server !"
 
 commands:
   vehicles:
-    description: "Vehicles general command"
-    permission: vehicles.command.use
-    usage: /vehicles help
-    permission-message: "[Vehicles] > You do not have permission to use vehicle commands."
+    description: "CustomObjects general command"
+    permission: customobjects.command.use
+    usage: /customobjects help
+    permission-message: "[CustomObjects] > You do not have permission to use this command."
 
 permissions:
-  vehicles:
+  customobjects:
     default: false
-    description: "Toggles all vehicles plugin perms."
+    description: "Toggles all CustomObjects plugin perms."
     children:
 
-      vehicles.command:
-        description: "Toggles all vehicle commands."
+      customobjects.command:
+        description: "Toggles all CustomObjects commands."
         default: false
         children:
-
-          vehicles.command.use:
-            description: "Allows user to use commands."
-            default: true
-          vehicles.command.spawn:
-            description: "Allows user to spawn a vehicle/object."
+          customobjects.command.spawn:
+            description: "Allows user to spawn a object."
             default: op
-          vehicles.command.remove:
-            description: "Allows user to remove a vehicle/object."
+          customobjects.command.remove:
+            description: "Allows user to remove a object."
             default: op
-          vehicles.command.lock:
-            description: "Allows user to lock their vehicles."
-            default: true
-          vehicles.command.unlock:
-            description: "Allows user to unlock their vehicles."
-            default: true
-          vehicles.command.giveaway:
-            description: "Allows user to giveaway their vehicles (lose ownership)."
-            default: true
-
-      vehicles.drive:
-        description: "Allows user to drive their vehicle or a unlocked one."
-        default: true
-      vehicles.passenger:
-        description: "Allows user to be a passenger in any vehicle unlocked."
-        default: true
