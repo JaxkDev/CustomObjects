@@ -1,10 +1,7 @@
-# Vehicles
-[WIP] A [PocketMine-MP](https://github.com/pmmp/PocketMine-MP) plugin that brings vehicles and other cool objects to your server, made by [JaxkDev](https://github.com/JaxkDev)
+# CustomObjects
+[WIP] A [PocketMine-MP](https://github.com/pmmp/PocketMine-MP) plugin that brings custom objects to your server, made by [JaxkDev](https://github.com/JaxkDev)
 
-_Vehicles default :_
-#### Available Vehicles:
-- Basic-Car
-
+_Default:_
 #### Available Objects:
 - Traffic-Cone
 - No-Entry-Sign
