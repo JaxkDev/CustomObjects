@@ -1,8 +1,8 @@
 name: CustomObjects
 author: JaxkDev
-version: 0.0.3
-api: [3.9.0]
-mcpe-protocol: [361]
+version: 0.1.0
+api: [3.11.0]
+mcpe-protocol: [389]
 main: JaxkDev\CustomObjects\Main
 website: "https://github.com/JaxkDev/CustomObjects"
 description: "[W.I.P | Pre-Release] PocketMine-MP plugin that brings custom objects to your server !"
