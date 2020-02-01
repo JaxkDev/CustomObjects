@@ -1,24 +1,23 @@
 <?php
 /*
- * Vehicles, PocketMine-MP Plugin.
+ * CustomObjects, PocketMine-MP Plugin.
  *
  * Licensed under the Open Software License version 3.0 (OSL-3.0)
- * Copyright (C) 2019 JaxkDev
+ * Copyright (C) 2019-2020 JaxkDev
  *
  * Twitter :: @JaxkDev
- * Discord :: Jackthehaxk21#8860
+ * Discord :: JaxkDev##8860
  * Email   :: JaxkDev@gmail.com
  */
 
 declare(strict_types=1);
 
-namespace JaxkDev\Vehicles;
+namespace JaxkDev\CustomObjects;
 
 use pocketmine\Player;
 use pocketmine\command\CommandSender;
-use JaxkDev\Vehicles\Vehicle\Vehicle;
 use pocketmine\command\ConsoleCommandSender;
-use JaxkDev\Vehicles\Object\DisplayObject;
+use JaxkDev\CustomObjects\Object\DisplayObject;
 
 use pocketmine\utils\TextFormat as C;
 
@@ -44,7 +43,7 @@ class CommandHandler
 	 */
 	function handleCommand(CommandSender $sender, array $args): void{
 		if($sender instanceof ConsoleCommandSender){
-			$sender->sendMessage($this->prefix.C::RED."Commands for Vehicles cannot be run from console.");
+			$sender->sendMessage($this->prefix.C::RED."Commands for CustomObjects cannot be run from console.");
 			return;
 		}
 		if(count($args) == 0){

@@ -1,18 +1,18 @@
 <?php
 /*
- * Vehicles, PocketMine-MP Plugin.
+ * CustomObjects, PocketMine-MP Plugin.
  *
  * Licensed under the Open Software License version 3.0 (OSL-3.0)
- * Copyright (C) 2019 JaxkDev
+ * Copyright (C) 2019-2020 JaxkDev
  *
  * Twitter :: @JaxkDev
- * Discord :: Jackthehaxk21#8860
+ * Discord :: JaxkDev#8860
  * Email   :: JaxkDev@gmail.com
  */
 
 declare(strict_types=1);
 
-namespace JaxkDev\Vehicles;
+namespace JaxkDev\CustomObjects;
 
 use pocketmine\event\entity\EntityLevelChangeEvent;
 use pocketmine\event\entity\EntityTeleportEvent;
@@ -21,8 +21,7 @@ use pocketmine\event\player\PlayerQuitEvent;
 use pocketmine\Player;
 use pocketmine\event\Listener;
 use pocketmine\utils\TextFormat as C;
-use JaxkDev\Vehicles\Vehicle\Vehicle; //Only 3 'vehicle's in one namespace *HAHA*
-use JaxkDev\Vehicles\Object\DisplayObject;
+use JaxkDev\CustomObjects\Object\DisplayObject;
 use pocketmine\event\server\DataPacketReceiveEvent;
 use pocketmine\network\mcpe\protocol\InteractPacket;
 use pocketmine\event\entity\EntityDamageByEntityEvent;

@@ -1,43 +1,40 @@
 <?php
 /*
- * Vehicles, PocketMine-MP Plugin.
+ * CustomObjects, PocketMine-MP Plugin.
  *
  * Licensed under the Open Software License version 3.0 (OSL-3.0)
- * Copyright (C) 2019 JaxkDev
+ * Copyright (C) 2019-2020 JaxkDev
  *
  * Twitter :: @JaxkDev
- * Discord :: Jackthehaxk21#8860
+ * Discord :: JaxkDev#8860
  * Email   :: JaxkDev@gmail.com
  */
 
 declare(strict_types=1);
 
-namespace JaxkDev\Vehicles\Object;
+namespace JaxkDev\CustomObjects\Object;
 
-use JaxkDev\Vehicles\Main;
+use JaxkDev\CustomObjects\Main;
 
 use pocketmine\nbt\tag\CompoundTag;
 use pocketmine\entity\Skin;
 use pocketmine\level\Level;
 use pocketmine\Player;
 
-class TrafficCone extends DisplayObject{
+class StopSign extends DisplayObject{
 	public $width = 0.6; //rough, probably no where near.
-	public $height = 1;
+	public $height = 3;
 
 	protected $baseOffset = 1.615;
 
 	public function __construct(Level $level, CompoundTag $nbt)
 	{
 		parent::__construct($level, $nbt);
-	}
-
-	public function canBeMovedByCurrents() : bool{
-		return true;
+		$this->setScale(0.26);
 	}
 
 	static function getName(): string{
-		return "Traffic-Cone";
+		return "Stop-Sign";
 	}
 
 	static function getDesign(): Skin

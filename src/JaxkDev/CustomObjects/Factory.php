@@ -1,18 +1,18 @@
 <?php
 /*
- * Vehicles, PocketMine-MP Plugin.
+ * CustomObjects, PocketMine-MP Plugin.
  *
  * Licensed under the Open Software License version 3.0 (OSL-3.0)
- * Copyright (C) 2019 JaxkDev
+ * Copyright (C) 2019-2020 JaxkDev
  *
  * Twitter :: @JaxkDev
- * Discord :: Jackthehaxk21#8860
+ * Discord :: JaxkDev#8860
  * Email   :: JaxkDev@gmail.com
  */
 
 declare(strict_types=1);
 
-namespace JaxkDev\Vehicles;
+namespace JaxkDev\CustomObjects;
 
 use Exception;
 use InvalidArgumentException;
@@ -20,7 +20,7 @@ use InvalidArgumentException;
 use pocketmine\entity\Skin;
 use pocketmine\plugin\PluginException;
 
-class DesignFactory{
+class Factory{
 	private static $instance;
 
 	/** @var Main */

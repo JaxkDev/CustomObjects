@@ -1,23 +1,23 @@
 <?php
 /*
- * Vehicles, PocketMine-MP Plugin.
+ * CustomObjects, PocketMine-MP Plugin.
  *
  * Licensed under the Open Software License version 3.0 (OSL-3.0)
- * Copyright (C) 2019 JaxkDev
+ * Copyright (C) 2019-2020 JaxkDev
  *
  * Twitter :: @JaxkDev
- * Discord :: Jackthehaxk21#8860
+ * Discord :: JaxkDev#8860
  * Email   :: JaxkDev@gmail.com
  */
 
 declare(strict_types=1);
 
-namespace JaxkDev\Vehicles\Object;
+namespace JaxkDev\CustomObjects\Object;
 
 use pocketmine\level\Level;
 use pocketmine\math\Vector3;
 use pocketmine\entity\Entity;
-use JaxkDev\Vehicles\Main;
+use JaxkDev\CustomObjects\Main;
 
 use ReflectionClass;
 use ReflectionException;
@@ -88,7 +88,7 @@ class ObjectFactory
 			}
 			/** @noinspection PhpIncludeInspection */
 			require $path;
-			$className = "JaxkDev\\Vehicles\\External\\".$file;
+			$className = "JaxkDev\\CustomObjects\\External\\".$file;
 			$rc = new reflectionClass($className);
 			/** @var DisplayObject $class */
 			$class = $rc->newInstanceWithoutConstructor();

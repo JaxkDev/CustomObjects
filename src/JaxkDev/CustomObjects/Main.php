@@ -1,18 +1,18 @@
 <?php
 /*
- * Vehicles, PocketMine-MP Plugin.
+ * CustomObjects, PocketMine-MP Plugin.
  *
  * Licensed under the Open Software License version 3.0 (OSL-3.0)
- * Copyright (C) 2019 JaxkDev
+ * Copyright (C) 2019-2020 JaxkDev
  *
  * Twitter :: @JaxkDev
- * Discord :: Jackthehaxk21#8860
+ * Discord :: JaxkDev#8860
  * Email   :: JaxkDev@gmail.com
  */
 
 declare(strict_types=1);
 
-namespace JaxkDev\Vehicles;
+namespace JaxkDev\CustomObjects;
 
 use pocketmine\utils\Config;
 use pocketmine\command\Command;
@@ -20,19 +20,11 @@ use pocketmine\plugin\PluginBase;
 use pocketmine\command\CommandSender;
 use pocketmine\utils\TextFormat as C;
 
-use JaxkDev\Vehicles\Vehicle\Vehicle;
-use JaxkDev\Vehicles\Object\ObjectFactory;
-use JaxkDev\Vehicles\Vehicle\VehicleFactory;
-
 class Main extends PluginBase
 {
-
 	private static $instance;
 
-	/** @var String|Vehicle[] */
-	public static $inVehicle = [];
-
-	public $prefix = C::GRAY."[".C::AQUA."Vehicles".C::GRAY."] ".C::GOLD."> ".C::RESET;
+	public $prefix = C::GRAY."[".C::AQUA."CustomObjects".C::GRAY."] ".C::GOLD."> ".C::RESET;
 
 	/** @var CommandHandler */
 	private $commandHandler;
@@ -40,22 +32,15 @@ class Main extends PluginBase
 	/** @var EventHandler */
 	private $eventHandler;
 
-	/** @var VehicleFactory */
-	public $vehicleFactory;
+	/** @var Factory */
+	private $factory;
 
-	/** @var ObjectFactory */
-	public $objectFactory;
-
-	/** @var DesignFactory */
-	public $designFactory;
-
-	/** @var String|String[]|String[] */
+	/** @var string[][] */
 	public $interactCommands = [];
 
 	/** @var Config */
 	private $cfgObject;
 
-	/** @var array */
 	public $cfg;
 
 	public function onLoad()
@@ -66,14 +51,14 @@ class Main extends PluginBase
 		//Save defaults here.
 		$this->saveConfig();
 		$this->saveResource("Objects/README.md", true);
-		$this->saveResource("Vehicles/README.md", true);
-		$this->saveResource("Vehicles/BLANK.php", true);
+		$this->saveResource("CustomObjects/README.md", true);
+		$this->saveResource("CustomObjects/BLANK.php", true);
 
 		//Add handlers and others here.
 		$this->commandHandler = new CommandHandler($this);
 		$this->vehicleFactory = new VehicleFactory($this);
 		$this->objectFactory = new ObjectFactory($this);
-		$this->designFactory = new DesignFactory($this);
+		$this->designFactory = new Factory($this);
 		$this->eventHandler = new EventHandler($this);
 
 		//Load any that need to be loaded.
